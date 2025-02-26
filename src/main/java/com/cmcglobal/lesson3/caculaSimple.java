@@ -19,6 +19,56 @@ public class caculaSimple {
 //        System.out.println("Division " + (firt / second));
 //
 //    }
+ //   --------------------------
+//    public static void main(String[] args) {
+//        // Create new object
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Enter your weight in kilograms: ");
+//        int weight = scanner.nextInt();
+//        System.out.println("Enter your height in meters: ");
+//        float height = scanner.nextFloat();
+//
+//        float BMI = weight/(height*height);
+//
+//        System.out.println("Your BMI is : " + BMI);
+//
+//
+//}
+//public static void main(String[] args) {
+//        // Create new object
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Enter an integer: ");
+//        int num = scanner.nextInt();
+//
+//        num++;
+//        System.out.println("After incrementing: "+ num);
+//
+//        num--;
+//        System.out.println("After decrementing: "+ num);
+//}
+public static void main(String[] args) {
+    // Create new object
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter year: ");
+    int leapYear = scanner.nextInt();
+
+
+    if (leapYear %  4 ){}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
