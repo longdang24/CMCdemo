@@ -14,7 +14,7 @@ public class caculaSimple {
 //        System.out.println("Enter the second interger ");
 //        int second = scanner.nextInt();
 //
-//        System.out.println("Addition " + (firt +second))10;
+//        System.out.println("Addition " + (firt +second));
 //        System.out.println("Subtraction " + (firt - second));
 //        System.out.println("Multiplication " + (firt * second));
 //        System.out.println("Division " + (firt / second));
