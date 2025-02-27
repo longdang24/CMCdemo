@@ -2,6 +2,7 @@ package com.cmcglobal.lesson3;
 import java.util.Scanner;
 
 public class caculaSimple {
+ ////ex1
 //    public static void main(String[] args) {
 //        // Create new object
 //        Scanner scanner = new Scanner(System.in);
@@ -20,6 +21,8 @@ public class caculaSimple {
 //
 //    }
  //   --------------------------
+
+////ex2
 //    public static void main(String[] args) {
 //        // Create new object
 //        Scanner scanner = new Scanner(System.in);
@@ -33,8 +36,9 @@ public class caculaSimple {
 //
 //        System.out.println("Your BMI is : " + BMI);
 //
-//
+// -----------------------------------------------
 //}
+ ////ex3
 //public static void main(String[] args) {
 //        // Create new object
 //        Scanner scanner = new Scanner(System.in);
@@ -47,17 +51,20 @@ public class caculaSimple {
 //
 //        num--;
 //        System.out.println("After decrementing: "+ num);
-//}
-public static void main(String[] args) {
-    // Create new object
-    Scanner scanner = new Scanner(System.in);
+//} 
+ //  ---------------------------
 
-    System.out.println("Enter year: ");
-    int leapYear = scanner.nextInt();
+ ////Ex4
+// public static void main(String[] args) {
+//     // Create new object
+//     Scanner scanner = new Scanner(System.in);
+
+//     System.out.println("Enter year: ");
+//     int leapYear = scanner.nextInt();
 
 
-    if (leapYear %  4 ){}
+//     if (leapYear %  4 ){}
 
-}
+// }
 
 
