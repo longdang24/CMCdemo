@@ -56,7 +56,15 @@ public static void main(String[] args) {
     int leapYear = scanner.nextInt();
 
 
-    if (leapYear %  4 ){}
+    if (leapYear % 4 == 0 && leapYear % 100 != 0 || leapYear % 400 ==0){
+        System.out.print( leapYear +" is a leap year");
+
+    }
+    else
+    {
+        System.out.println(leapYear+" is not a leap year");
+    }
+}
 
 
 
