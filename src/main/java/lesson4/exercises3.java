@@ -11,7 +11,7 @@ public class exercises3 {
         System.out.println("I have selected a number between 1 and 10. Try to guess it!" );
         System.out.println("Enter your guess: ");
 
-        for(int i = 1 , i <= 10 ,i++)
+        //for(int i = 1 , i <= 10 ,i++)
 
 
 
