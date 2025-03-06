@@ -5,7 +5,7 @@ public class exercises1 {
     public static void main(String[] args) {
 
         for (int i = 1; i <= 100; i++) {
-            switch (i % 15) { // Check divisibility by 15 first for FizzBuzz
+            switch (i % 15) { 
                 case 3:
                 case 6:
                 case 9:
