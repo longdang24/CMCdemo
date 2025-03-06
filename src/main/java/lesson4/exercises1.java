@@ -5,7 +5,7 @@ public class exercises1 {
     public static void main(String[] args) {
 
         for (int i = 1; i <= 100; i++) {
-            switch (i % 15) { 
+            switch (i % 15) { // 15 la boi chung chung cua 5 va 3
                 case 3:
                 case 6:
                 case 9:
