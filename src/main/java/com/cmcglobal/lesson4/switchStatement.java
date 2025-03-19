@@ -1,4 +1,4 @@
-package lesson4;
+package com.cmcglobal.lesson4;
 
 import java.util.Scanner;
 
