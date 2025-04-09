@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.java>4.26.0</selenium.java>
         <junit>5.11.0</junit>
+        <TestNG>7.10.2</TestNG>
         <maven.compiler>3.8.1</maven.compiler>
         <maven.surfire>3.0.0-M5</maven.surfire>
     </properties>
@@ -36,7 +37,19 @@
             <version>${junit}</version>
             <scope>test</scope>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
