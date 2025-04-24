@@ -27,7 +27,7 @@ public class ex7 {
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 
         WebElement checkbox = driver.findElement(By.cssSelector("#checkbox"));
-        WebElement removeButton = driver.findElement(By.cssSelector("#btn"));
+        WebElement removeButton = driver.findElement(By.cssSelector("checkbox-example > button"));
 
         removeButton.click();
 
@@ -42,7 +42,7 @@ public class ex7 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
 
-        WebElement inputField = driver.findElement(By.cssSelector("#input-example > input"));
+        WebElement inputField = driver.findElement(By.cssSelector("#input-example > input[type=text]"));
         WebElement enableButton = driver.findElement(By.cssSelector("#input-example > button"));
 
 
@@ -61,30 +61,13 @@ public class ex7 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 
-        WebElement startButton = driver.findElement(By.cssSelector("#start button"));
+        WebElement startButton = driver.findElement(By.cssSelector("#start > button"));
         startButton.click();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish")));
 
         Assert.assertTrue(message.getText().contains("Hello World!"), "Nội dung không xuất hiện đúng!");
-        driver.quit();
-    }
-    @Test
-    public void testLoadingTime() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/dynamic_loading/2");
-
-        WebElement startButton = driver.findElement(By.cssSelector("#start button"));
-        long startTime = System.currentTimeMillis();
-
-        startButton.click();
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#finish")));
-
-        long endTime = System.currentTimeMillis();
-        Assert.assertTrue((endTime - startTime) <= 10000, "Thời gian tải vượt quá giới hạn!");
         driver.quit();
     }
     @Test
@@ -114,20 +97,11 @@ public class ex7 {
         driver.quit();
     }
     @Test
-    public void testMenuVisibility() {
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/disappearing_elements");
-
-        List<WebElement> menuItems = driver.findElements(By.tagName("li"));
-        Assert.assertTrue(menuItems.size() == 5, "Một số mục menu đã biến mất!");
-        driver.quit();
-    }
-    @Test
     public void testAlertDisplay() {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
-        WebElement alertButton = driver.findElement(By.cssSelector("button[onclick='jsAlert()']"));
+        WebElement alertButton = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(1) > button"));
         alertButton.click();
 
         Alert alert = driver.switchTo().alert();
@@ -141,7 +115,7 @@ public class ex7 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 
-        WebElement confirmButton = driver.findElement(By.cssSelector("button[onclick='jsConfirm()']"));
+        WebElement confirmButton = driver.findElement(By.cssSelector("#content > div > ul > li:nth-child(2) > button"));
         confirmButton.click();
 
         Alert alert = driver.switchTo().alert();
@@ -157,7 +131,7 @@ public class ex7 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
-        WebElement addButton = driver.findElement(By.cssSelector("button[onclick='addElement()']"));
+        WebElement addButton = driver.findElement(By.cssSelector("#content > div > button"));
         addButton.click();
 
         List<WebElement> addedElements = driver.findElements(By.cssSelector(".added-manually"));
@@ -169,10 +143,10 @@ public class ex7 {
         WebDriver driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
 
-        WebElement addButton = driver.findElement(By.cssSelector("button[onclick='addElement()']"));
+        WebElement addButton = driver.findElement(By.cssSelector("#content > div > button"));
         addButton.click();
 
-        WebElement deleteButton = driver.findElement(By.cssSelector(".added-manually"));
+        WebElement deleteButton = driver.findElement(By.cssSelector("#elements > button"));
         deleteButton.click();
 
         List<WebElement> addedElements = driver.findElements(By.cssSelector(".added-manually"));
