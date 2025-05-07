@@ -49,7 +49,5 @@ public class loginPage {
         webDriver.findElement(By.id("continue")).click();
         webDriver.findElement(By.id("finish")).click();
         Assert.assertEquals("Thank you for your order!","Thank you for your order!");
-
     }
-
 }
